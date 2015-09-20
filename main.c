@@ -3,12 +3,11 @@
 #include "convolution.h"
 #include "pooling.h"
 #include "activation.h"
+#include "net.h"
 
 int main() {
 
 	int i;
-
-	/* Test Convolution */
 	printf("==== Test convolution ====\n");
 	image_t *test_cimage = init_image(5);
 	for(i = 0; i < test_cimage->size*test_cimage->size; i += 1) {
@@ -24,8 +23,6 @@ int main() {
 		printf("%f\n", result_cimage->element[i]);
 	}
 
-
-	/* Test pooling */
 	printf("==== Test pooling ====\n");
 	image_t *test_pimage = init_image(6);
 	for(i = 0; i < test_pimage->size*test_pimage->size; i += 1) {
@@ -38,5 +35,15 @@ int main() {
 		printf("%f\n", result_pimage->element[i]);
 	}
 
+	// API 9/20
+
+	net_t net;
+	
+	init(&net);
+
+	for(i = 0; i < 17; i += 1) {
+		input(&net, init_image(i+1));
+		printf("%d %d %d\n", net.image_num, net.image_capacity, net.image[i]->size);
+	}
 	return 0;
 }
