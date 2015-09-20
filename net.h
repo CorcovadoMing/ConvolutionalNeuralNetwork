@@ -3,6 +3,7 @@
 
 #include "kernel.h"
 #include "image.h"
+#include "convolution.h"
 #include <stdlib.h>
 
 typedef struct {
@@ -33,6 +34,12 @@ void input(net_t *net, image_t *image) {
 		net->image_num += 1;
 		net->image_capacity *= 2;
 	}
+}
+
+typedef image_t *(* convolution_f)(image_t *, kernel_t *, activator_f);
+
+void add_layer(net_t *net, convolution_f conv, kernel_t *kernel, activator_f activator) {
+	input(net, conv(net->image[net->image_num-1], kernel, activator));
 }
 
 #endif

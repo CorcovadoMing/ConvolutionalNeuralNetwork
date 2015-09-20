@@ -38,12 +38,12 @@ int main() {
 	// API 9/20
 
 	net_t net;
-	
 	init(&net);
+	input(&net, init_image(99));
 
 	for(i = 0; i < 17; i += 1) {
-		input(&net, init_image(i+1));
-		printf("%d %d %d\n", net.image_num, net.image_capacity, net.image[i]->size);
+		add_layer(&net, convolution, init_kernel(3), relu);
+		printf("%d\t%d\t%d\n", net.image_num, net.image_capacity, net.image[i+1]->size);
 	}
 	return 0;
 }
