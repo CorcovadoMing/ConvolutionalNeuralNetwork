@@ -34,3 +34,5 @@
 # CNN Execution
 cnn
 
+# Scons
+*.dblite
