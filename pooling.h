@@ -3,6 +3,14 @@
 
 #include "image.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 image_t *max_pooling(image_t *target, int factor);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

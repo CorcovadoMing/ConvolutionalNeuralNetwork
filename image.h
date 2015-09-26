@@ -3,8 +3,15 @@
 
 #include "container.h"
 
-typedef container_t image_t;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef container_t image_t;
 image_t *init_image(int size);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

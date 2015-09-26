@@ -3,8 +3,15 @@
 
 #include "container.h"
 
-typedef container_t kernel_t;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef container_t kernel_t;
 kernel_t *init_kernel(int size);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
