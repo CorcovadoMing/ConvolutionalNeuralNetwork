@@ -45,5 +45,13 @@ int main() {
 		add_layer(&net, convolution, init_kernel(3), relu);
 		printf("%d\t%d\t%d\n", net.image_num, net.image_capacity, net.image[i+1]->size);
 	}
+
+
+	printf("==== Test Randomize kernel init ====\n");
+	kernel_t *random_kernel = init_kernel(3);
+	for(i = 0; i < 9; i += 1) {
+		printf("%f\n", random_kernel->element[i]);
+	}
+
 	return 0;
 }
