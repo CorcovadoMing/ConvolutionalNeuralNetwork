@@ -8,6 +8,8 @@ extern "C" {
 #endif
 
 image_t *max_pooling(image_t *target, int factor);
+image_t *avg_pooling(image_t *target, int factor);
+
 
 #ifdef __cplusplus
 }
