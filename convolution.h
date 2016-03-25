@@ -8,8 +8,7 @@
 extern "C" {
 #endif
 
-typedef float (* activator_f)(float);
-image_t *convolution(image_t *target, kernel_t *kernel, activator_f activator);
+image_t *convolution(image_t *target, kernel_t *kernel);
 
 #ifdef __cplusplus
 }

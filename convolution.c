@@ -2,7 +2,7 @@
 #include <math.h>
 #include "convolution.h"
 
-image_t *convolution(image_t *target, kernel_t *kernel, activator_f activator) {
+image_t *convolution(image_t *target, kernel_t *kernel) {
 	image_t *result = (image_t *)malloc(sizeof(image_t));
 	result->size = target->size - (kernel->size - 1);
 	result->element = (float *)malloc(result->size*result->size*sizeof(float));
@@ -16,7 +16,7 @@ image_t *convolution(image_t *target, kernel_t *kernel, activator_f activator) {
 					sum += kernel->element[m*kernel->size+n]*target->element[i*target->size+j+m*target->size+n];
 				}
 			}
-			result->element[i*result->size+j] = activator(sum);
+			result->element[i*result->size+j] = sum;
 		}
 	}
 	
