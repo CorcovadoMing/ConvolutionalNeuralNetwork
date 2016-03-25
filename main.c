@@ -9,7 +9,7 @@
 int main() {
 
 	int i;
-	printf("==== Test convolution ====\n");
+	printf("==== Initial status ====\n");
 	image_t *test_cimage = init_image(8);
 	for(i = 0; i < test_cimage->size*test_cimage->size; i += 1) {
 		if (i%2)
@@ -21,25 +21,22 @@ int main() {
 	for(i = 0; i < test_kernel->size*test_kernel->size; i += 1) {
 		test_kernel->element[i] = (i%3)+1;
 	}
+	printf("Image: \n");
+	print(test_cimage);
+	printf("Kernel: \n");
+	print(test_kernel);
 	
+	printf("==== Test convolution ====\n");
 	image_t *result_cimage = convolution(test_cimage, test_kernel);
-	for (i = 0; i < result_cimage->size*result_cimage->size; i += 1) {
-		printf("%f\n", result_cimage->element[i]);
-	}
+	print(result_cimage);
 
 	printf("==== Test activator function ====\n");
 	image_t *result_aimage = activator(result_cimage, relu);
-	for (i = 0; i < result_aimage->size*result_aimage->size; i += 1) {
-		printf("%f\n", result_aimage->element[i]);
-	}
+	print(result_aimage);
 
 	printf("==== Test pooling ====\n");
 	int pooling_factor = 3;
 	image_t *result_pimage = max_pooling(result_aimage, pooling_factor);
-	for(i = 0; i < result_pimage->size*result_pimage->size; i += 1) {
-		printf("%f\n", result_pimage->element[i]);
-	}
-
 	print(result_pimage);
 
 	// API 9/20
