@@ -40,6 +40,8 @@ int main() {
 		printf("%f\n", result_pimage->element[i]);
 	}
 
+	print(result_pimage);
+
 	// API 9/20
 /*
 	net_t net;
