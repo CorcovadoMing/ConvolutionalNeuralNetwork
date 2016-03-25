@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "net.h"
 
+/*
 void init(net_t *net) {
 	net->image_capacity = 0;
 	net->image_num = 0;
@@ -30,3 +31,4 @@ typedef image_t *(* convolution_f)(image_t *, kernel_t *, activator_f);
 void add_layer(net_t *net, convolution_f conv, kernel_t *kernel, activator_f activator) {
 	input(net, conv(net->image[net->image_num-1], kernel, activator));
 }
+*/
