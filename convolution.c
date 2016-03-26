@@ -5,7 +5,8 @@
 
 layer_t *convolution(layer_t *target, layer_t *kernel) {
 	int kernel_size = kernel->feature[0]->size;
-	int result_size = target->feature[0]->size;
+	int target_size = target->feature[0]->size;
+	int result_size = target->feature[0]->size - kernel_size + 1;
 	layer_t *result_layer = init_layer();
 
 	int stack = 0;
@@ -21,7 +22,7 @@ layer_t *convolution(layer_t *target, layer_t *kernel) {
 				for(m = 0; m < kernel_size; m += 1) {
 					for(n = 0; n < kernel_size; n += 1) {
 						for (map = 0; map < target->size; map += 1) {
-							sum += kernel->feature[stack]->element[m*kernel_size+n] * target->feature[map]->element[i*result_size+j+m*result_size+n];
+							sum += kernel->feature[stack]->element[m*kernel_size+n] * target->feature[0]->element[i*target_size+j+m*target_size+n];
 						}
 					}
 				}
