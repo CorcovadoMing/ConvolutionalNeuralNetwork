@@ -4,6 +4,7 @@
 #include "pooling.h"
 #include "activation.h"
 #include "activator.h"
+#include "layer.h"
 #include "net.h"
 
 int main() {
@@ -22,7 +23,8 @@ int main() {
 		test_kernel->element[i] = (i%3)+1;
 	}
 
-	layer_t *input_layer = 
+	layer_t *input_layer = init_layer();
+	add_feature(input_layer, test_cimage);
 	printf("Image: \n");
 	printmap(test_cimage);
 	printf("Kernel: \n");
