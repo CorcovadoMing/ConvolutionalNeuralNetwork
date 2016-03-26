@@ -21,6 +21,8 @@ int main() {
 	for(i = 0; i < test_kernel->size*test_kernel->size; i += 1) {
 		test_kernel->element[i] = (i%3)+1;
 	}
+
+	layer_t *input_layer = 
 	printf("Image: \n");
 	printmap(test_cimage);
 	printf("Kernel: \n");

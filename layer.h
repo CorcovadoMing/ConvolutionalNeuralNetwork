@@ -11,7 +11,7 @@ typedef struct {
 	container_t *feature;
 } layer_t;
 
-void init(layer_t *);
+layer_t *init_layer();
 void add_feature(layer_t *, container_t *);
 
 #ifdef __cplusplus
