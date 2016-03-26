@@ -9,7 +9,7 @@ image_t *init_image(int size) {
 	return image_alloc;
 }
 
-void print(image_t *target) {
+void printmap(image_t *target) {
 	int i = 0, j = 0;
 	for (i = 0; i < target->size; i += 1) {
 		for (j = 0; j < target->size; j += 1) {

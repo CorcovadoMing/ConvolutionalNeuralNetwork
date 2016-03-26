@@ -22,22 +22,22 @@ int main() {
 		test_kernel->element[i] = (i%3)+1;
 	}
 	printf("Image: \n");
-	print(test_cimage);
+	printmap(test_cimage);
 	printf("Kernel: \n");
-	print(test_kernel);
+	printmap(test_kernel);
 	
 	printf("==== Test convolution ====\n");
 	image_t *result_cimage = convolution(test_cimage, test_kernel);
-	print(result_cimage);
+	printmap(result_cimage);
 
 	printf("==== Test activator function ====\n");
 	image_t *result_aimage = activator(result_cimage, relu);
-	print(result_aimage);
+	printmap(result_aimage);
 
 	printf("==== Test pooling ====\n");
 	int pooling_factor = 3;
 	image_t *result_pimage = max_pooling(result_aimage, pooling_factor);
-	print(result_pimage);
+	printmap(result_pimage);
 
 	// API 9/20
 /*
