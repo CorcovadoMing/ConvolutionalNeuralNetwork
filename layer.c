@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "image.h"
 #include "layer.h"
@@ -29,4 +30,10 @@ void add_feature(layer_t *layer, container_t *target) {
 	}
 }
 
-void printlayer(layer_t *layer){}
+void printlayer(layer_t *layer) {
+	int i = 0;
+	for (i = 0; i < layer->size; i += 1) {
+		printf("*** Feature %d ***\n", i);
+		printmap(layer->feature[i]);
+	}
+}

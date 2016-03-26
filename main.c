@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include "convolution.h"
 #include "pooling.h"
 #include "activation.h"
@@ -23,12 +22,17 @@ int main() {
 		test_kernel->element[i] = (i%3)+1;
 	}
 
+	printf("Images:\n");
 	layer_t *input_layer = init_layer();
 	add_feature(input_layer, test_cimage);
-	printf("Image: \n");
-	printmap(test_cimage);
-	printf("Kernel: \n");
-	printmap(test_kernel);
+	printlayer(input_layer);
+	printf("\n");
+
+	printf("Kernels:\n");
+	layer_t *kernel_layer = init_layer();
+	add_feature(kernel_layer, test_kernel);
+	printlayer(kernel_layer);
+	printf("\n");
 	
 	printf("==== Test convolution ====\n");
 	image_t *result_cimage = convolution(test_cimage, test_kernel);
