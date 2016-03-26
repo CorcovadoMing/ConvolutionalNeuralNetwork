@@ -35,17 +35,17 @@ int main() {
 	printf("\n");
 	
 	printf("==== Test convolution ====\n");
-	image_t *result_cimage = convolution(test_cimage, test_kernel);
-	printmap(result_cimage);
+	layer_t *result_clayer = convolution(input_layer, kernel_layer);
+	printlayer(result_clayer);
 
 	printf("==== Test activator function ====\n");
-	image_t *result_aimage = activator(result_cimage, relu);
-	printmap(result_aimage);
+	//image_t *result_aimage = activator(result_cimage, relu);
+	//printmap(result_aimage);
 
 	printf("==== Test pooling ====\n");
-	int pooling_factor = 3;
-	image_t *result_pimage = max_pooling(result_aimage, pooling_factor);
-	printmap(result_pimage);
+	//int pooling_factor = 3;
+	//image_t *result_pimage = max_pooling(result_aimage, pooling_factor);
+	//printmap(result_pimage);
 
 	// API 9/20
 /*

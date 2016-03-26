@@ -2,13 +2,13 @@
 #define __CONVOLUTION__
 
 #include "kernel.h"
-#include "image.h"
+#include "layer.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-image_t *convolution(image_t *target, kernel_t *kernel);
+layer_t *convolution(layer_t *target, layer_t *kernel);
 
 #ifdef __cplusplus
 }
