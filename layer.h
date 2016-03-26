@@ -7,8 +7,12 @@ extern "C" {
 
 typedef struct {
 	int size;
+	int capacity;
 	container_t *feature;
 } layer_t;
+
+void init(layer_t *);
+void add_feature(layer_t *, container_t *);
 
 #ifdef __cplusplus
 }
