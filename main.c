@@ -58,8 +58,6 @@ int main() {
 	printf("==== Test activator function ====\n");
 	layer_t *result_alayer = activator(result_clayer, relu);
 	printlayer(result_alayer);
-	//image_t *result_aimage = activator(result_cimage, relu);
-	//printmap(result_aimage);
 
 	printf("==== Test pooling ====\n");
 	//int pooling_factor = 3;
