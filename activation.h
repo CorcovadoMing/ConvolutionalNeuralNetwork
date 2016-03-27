@@ -6,7 +6,6 @@ extern "C" {
 #endif
 
 float relu(float input);
-float softmax(float input);
 float none(float input);
 
 #ifdef __cplusplus
