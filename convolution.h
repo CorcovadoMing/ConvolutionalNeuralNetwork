@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-layer_t *convolution(layer_t *target, layer_t *kernel);
+layer_t *convolution2D(layer_t *target, layer_t *kernel);
 
 #ifdef __cplusplus
 }

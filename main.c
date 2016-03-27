@@ -42,23 +42,25 @@ int main() {
 	add_feature(input_layer, test_cimage1);
 	add_feature(input_layer, test_cimage2);
 	printlayer(input_layer);
-	printf("\n");
 
 	printf("Kernels:\n");
 	layer_t *kernel_layer = init_layer();
 	add_feature(kernel_layer, test_kernel1);
 	add_feature(kernel_layer, test_kernel2);
 	printlayer(kernel_layer);
-	printf("\n");
-	
-	printf("==== Test convolution ====\n");
-	layer_t *result_clayer = convolution(input_layer, kernel_layer);
-	printlayer(result_clayer);
 
+	printf("\n");
+	printf("==== Test convolution ====\n");
+	printf("Convolution2D:\n");
+	layer_t *result_clayer = convolution2D(input_layer, kernel_layer);
+	printlayer(result_clayer);
+	
+	printf("\n");
 	printf("==== Test activator function ====\n");
 	layer_t *result_alayer = activator(result_clayer, relu);
 	printlayer(result_alayer);
 
+	printf("\n");
 	printf("==== Test pooling ====\n");
 	printf("Max Pooling:\n");
 	layer_t *result_player = max_pooling(result_alayer, 3);

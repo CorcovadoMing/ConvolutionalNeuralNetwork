@@ -3,7 +3,7 @@
 #include "convolution.h"
 #include "image.h"
 
-layer_t *convolution(layer_t *target, layer_t *kernel) {
+layer_t *convolution2D(layer_t *target, layer_t *kernel) {
 	int kernel_size = kernel->feature[0]->size;
 	int target_size = target->feature[0]->size;
 	int result_size = target->feature[0]->size - kernel_size + 1;
