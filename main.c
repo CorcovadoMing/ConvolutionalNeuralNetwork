@@ -34,7 +34,7 @@ int main() {
 	
 	kernel_t *test_kernel2 = init_kernel(3);
 	for(i = 0; i < test_kernel2->size*test_kernel2->size; i += 1) {
-		test_kernel2->element[i] = 1;
+		test_kernel2->element[i] = -1;
 	}
 
 	printf("Images:\n");
@@ -56,6 +56,8 @@ int main() {
 	printlayer(result_clayer);
 
 	printf("==== Test activator function ====\n");
+	layer_t *result_alayer = activator(result_clayer, relu);
+	printlayer(result_alayer);
 	//image_t *result_aimage = activator(result_cimage, relu);
 	//printmap(result_aimage);
 

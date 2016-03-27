@@ -5,10 +5,10 @@
 extern "C" {
 #endif
 
-#include "image.h"
+#include "layer.h"
 
 typedef float (*activator_f) (float);
-image_t *activator(image_t *target, activator_f activator);
+layer_t *activator(layer_t *target, activator_f activator);
 
 #ifdef __cplusplus
 }
