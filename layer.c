@@ -30,8 +30,7 @@ void add_feature(layer_t *layer, container_t *target) {
 }
 
 void printlayer(layer_t *layer) {
-	int i = 0;
-	for (i = 0; i < layer->size; i += 1) {
+	for (int i = 0; i < layer->size; i += 1) {
 		printf("*** Feature %d ***\n", i);
 		printmap(layer->feature[i]);
 	}

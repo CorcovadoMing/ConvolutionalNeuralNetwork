@@ -12,9 +12,8 @@ image_t *init_image2D(int size) {
 }
 
 void printmap(image_t *target) {
-	int i = 0, j = 0;
-	for (i = 0; i < target->size; i += 1) {
-		for (j = 0; j < target->size; j += 1) {
+	for (int i = 0; i < target->size; i += 1) {
+		for (int j = 0; j < target->size; j += 1) {
 			printf("%f\t", target->element[0][i*target->size+j]);
 		}
 		printf("\n");

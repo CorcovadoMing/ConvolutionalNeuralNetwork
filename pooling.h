@@ -7,9 +7,9 @@
 extern "C" {
 #endif
 
-layer_t *max_pooling(layer_t *target, int factor);
-layer_t *avg_pooling(layer_t *target, int factor);
-layer_t *min_pooling(layer_t *target, int factor);
+  layer_t *max_pooling(layer_t *target, int factor);
+  layer_t *avg_pooling(layer_t *target, int factor);
+  layer_t *min_pooling(layer_t *target, int factor);
 
 #ifdef __cplusplus
 }

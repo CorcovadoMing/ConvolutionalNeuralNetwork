@@ -7,9 +7,9 @@
 extern "C" {
 #endif
 
-typedef container_t image_t;
-image_t *init_image2D(int size);
-void printmap(image_t *);
+  typedef container_t image_t;
+  image_t *init_image2D(int size);
+  void printmap(image_t *);
 
 #ifdef __cplusplus
 }
