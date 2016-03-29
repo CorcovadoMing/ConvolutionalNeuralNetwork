@@ -8,7 +8,7 @@ extern "C" {
 #endif
 
 typedef container_t kernel_t;
-kernel_t *init_kernel(int size);
+kernel_t *init_kernel2D(int size);
 
 #ifdef __cplusplus
 }
