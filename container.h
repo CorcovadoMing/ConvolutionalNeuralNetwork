@@ -14,7 +14,7 @@ extern "C" {
     int size;
     int depth;
     float **element;
-  } container3D_t
+  } container3D_t;
 
 #ifdef __cplusplus
 }
