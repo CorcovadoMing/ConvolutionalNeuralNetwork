@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "activator.h"
 #include "image.h"
 
