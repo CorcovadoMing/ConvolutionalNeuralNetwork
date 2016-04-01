@@ -19,9 +19,12 @@ image_t *init_image3D(int size, int depth) {
 
 void printmap(image_t *target) {
 	for (int i = 0; i < target->size; i += 1) {
-		for (int j = 0; j < target->size; j += 1) {
-			printf("%f\t", target->element[0][i*target->size+j]);
-		}
+    for (int k = 0; k < target->depth; k += 1) { 
+      for (int j = 0; j < target->size; j += 1) {
+        printf("%f\t", target->element[k][i*target->size+j]);
+      }
+      printf("\t");
+    }
 		printf("\n");
 	}
 }
