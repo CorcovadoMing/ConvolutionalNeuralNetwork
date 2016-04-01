@@ -72,5 +72,12 @@ int main() {
 	result_player = min_pooling(result_alayer, 3);
 	printlayer(result_player);
 
+  printf("=== Test image3D ===\n");
+  image_t *image3d = init_image3D(3, 3);
+  image3d->element[0][1] = 1;
+  image3d->element[1][1] = 2;
+  image3d->element[2][1] = 3;
+  printmap(image3d);
+
   return 0;
 }
