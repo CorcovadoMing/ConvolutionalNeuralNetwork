@@ -23,7 +23,9 @@ void printmap(image_t *target) {
       for (int j = 0; j < target->size; j += 1) {
         printf("%f\t", target->element[k][i*target->size+j]);
       }
-      printf("\t");
+      if (target->depth > 1 && k < target->depth -1) {
+        printf("|\t");
+      }
     }
 		printf("\n");
 	}
