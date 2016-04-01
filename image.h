@@ -9,6 +9,7 @@ extern "C" {
 
   typedef container_t image_t;
   image_t *init_image2D(int size);
+  image_t *init_image3D(int size, int depth);
   void printmap(image_t *);
 
 #ifdef __cplusplus
