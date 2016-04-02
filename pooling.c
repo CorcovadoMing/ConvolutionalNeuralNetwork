@@ -43,7 +43,7 @@ layer_t *avg_pooling(layer_t *target, int factor) {
 						sum += target->feature[stack]->element[0][i*target->feature[stack]->size*factor+j*factor+m*target->feature[stack]->size+n];
 					}
 				}
-				result->element[0][i*result->size+j] = sum;
+				result->element[0][i*result->size+j] = sum / (target->feature[stack]->size * target->feature[stack]->size);
 			}
 		}
 		add_feature(result_layer, result);
