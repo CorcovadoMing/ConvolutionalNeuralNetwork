@@ -4,6 +4,7 @@
 #include "activation.h"
 #include "activator.h"
 #include "layer.h"
+#include "print.h"
 #include "net.h"
 
 int main() {

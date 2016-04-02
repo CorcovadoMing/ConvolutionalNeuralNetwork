@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "image.h"
+#include "print.h"
 #include "layer.h"
 
 layer_t *init_layer() {
@@ -26,12 +26,5 @@ void add_feature(layer_t *layer, container_t *target) {
 		layer->feature[layer->size] = target;
 		layer->size += 1;
 		layer->capacity *= 2;
-	}
-}
-
-void printlayer(layer_t *layer) {
-	for (int i = 0; i < layer->size; i += 1) {
-		printf("*** Feature %d ***\n", i);
-		printmap(layer->feature[i]);
 	}
 }
