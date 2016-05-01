@@ -1,1 +1,0 @@
-Program('cnn', Glob('*.c'))

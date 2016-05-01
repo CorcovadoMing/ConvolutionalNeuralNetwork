@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "convolution.h"
-#include "pooling.h"
-#include "activation.h"
-#include "activator.h"
-#include "layer.h"
-#include "print.h"
-#include "net.h"
+#include "src/convolution.h"
+#include "src/pooling.h"
+#include "src/activation.h"
+#include "src/activator.h"
+#include "src/layer.h"
+#include "src/print.h"
+#include "src/net.h"
 
 int main() {
 
